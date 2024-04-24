@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANDAR</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff; /* Cambiamos el color de fondo a blanco */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      opacity: 1; /* Establecemos la opacidad inicial a 1 */
+      transition: opacity 1s; /* Agregamos una transición de opacidad */
+    }
+
+    .diamond {
+      width: 20px;
+      height: 20px;
+      border: 2px solid #333;
+      border-radius: 5px;
+      animation: rotateDiamond 1s infinite linear;
+      margin-bottom: 10px; /* Añadimos un margen inferior para separar el rombo del texto */
+    }
+
+    @keyframes rotateDiamond {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .text {
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<div class="loader">
+  <div class="diamond"></div>
+  <div class="text">A rest for the Soul</div>
+</div>
+
+<div class="container mt-5">
+  <!-- Contenido de tu página aquí -->
+</div>
+
+<script>
+  // Ocultar la pantalla de carga y agregar efecto de desvanecido
+  setTimeout(function() {
+    var loader = document.querySelector('.loader');
+    loader.style.opacity = '0';
+    setTimeout(function() {
+      loader.style.display = 'none';
+    }, 1000); // 1000 milisegundos = 1 segundo
+  }, 2000); // 2000 milisegundos = 2 segundos
+</script>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANDAR</title>
+      <!-- Template Main CSS File -->
+      <meta content="" name="description">
+  <meta content="" name="keywords">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicons -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+  <link href="assets/img/asdasdasd.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/styleAndares.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<BR></BR>
+
+ <!-- Aquí se agrega el separador -->
+ <div id="andares" class="container position-relative">
+  <div class="section-title text-center">
+      <h2>ANDAR DE LA PUERTA SECULAR</h2>
+      <div class="separator">
+          <img src="assets/img/separador.png" alt="Separador">
+      </div> <!-- Aquí se agrega el separador -->
+  </div>
+  <a href="indexIngles.html#andar2" class="position-absolute top-0 end-0 m-3 text-dark">
+    <i class="bi bi-arrow-left-circle fs-3 arrow-custom"></i>
+</a>
+</div>
+
+
+   <!-- Aquí se agrega el separador -->
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title></title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <style>
+        /* Estilos adicionales */
+        .gallery-container {
+          display: flex;
+          justify-content: center; /* Centra horizontalmente el contenedor */
+          overflow-x: auto; /* Permite desplazamiento horizontal */
+        }
+        .gallery-item {
+          flex: 0 0 auto; /* Tamaño de las imágenes */
+          margin-right: 10px;
+          position: relative; /* Permitirá posicionar los íconos */
+        }
+        .gallery-img {
+          width: 200px;
+          height: 200px;
+          object-fit: cover;
+          cursor: pointer;
+        }
+        .popup-icon {
+          position: absolute;
+          color: #fff;
+          font-size: 24px;
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+        .gallery-item:hover .popup-icon {
+          opacity: 1;
+        }
+        .popup-icon:hover {
+          cursor: pointer;
+        }
+        .popup-icon.whatsapp {
+          top: 10%;
+          left: 10%;
+        }
+        .popup-icon.info {
+          top: 10%;
+          left: 20%;
+        }
+      </style>
+    </head>
+    <body>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Galería de Imágenes</title>
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+          <style>
+            /* Estilos adicionales */
+            .gallery-container {
+              display: flex;
+              justify-content: center; /* Centra horizontalmente el contenedor */
+              overflow-x: auto; /* Permite desplazamiento horizontal */
+            }
+            .gallery-item {
+              flex: 0 0 auto; /* Tamaño de las imágenes */
+              margin-right: 10px;
+              position: relative; /* Permitirá posicionar los íconos */
+            }
+            .gallery-img {
+              width: 200px;
+              height: 200px;
+              object-fit: cover;
+              cursor: pointer;
+            }
+            .popup-icon {
+              position: absolute;
+              color: #fbfbfc  ;
+              font-size: 24px;
+              opacity: 0;
+              transition: opacity 0.3s;
+            }
+            .gallery-item:hover .popup-icon {
+              opacity: 1;
+            }
+            .popup-icon:hover {
+              cursor: pointer;
+              color: rgb(230, 225, 225);
+              transition: 0.3s;
+            }
+            .popup-icon.whatsapp {
+              top: 10%;
+              left: 10%;
+            }
+            .popup-icon.info {
+              top: 10%;
+              left: 20%;
+            }
+        
+            /* Estilos adicionales para dispositivos móviles */
+            @media (max-width: 576px) {
+              .gallery-container {
+                flex-direction: column; /* Muestra las imágenes una debajo de la otra en dispositivos móviles */
+                align-items: center; /* Centra el contenido en el eje horizontal */
+              }
+            }
+          </style>
+        </head>
+        <body>
+        
+        <div class="container mt-5">
+          <div class="gallery-container">
+            <div class="gallery-item">
+              <img src="assets/img/2/1.jpeg" alt="Image 1" class="gallery-img" data-toggle="modal" data-target="#exampleModal" title="More Info">
+              <a href="https://api.whatsapp.com/send?phone=NUMERO_DE_TELEFONO" target="_blank"><i class="fab fa-whatsapp popup-icon whatsapp" title="Reserve!"></i></a>
+              
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/2/2.jpeg" alt="Image 2" class="gallery-img" data-toggle="modal" data-target="#exampleModal2" title="More Info">
+              <a href="https://api.whatsapp.com/send?phone=NUMERO_DE_TELEFONO" target="_blank"><i class="fab fa-whatsapp popup-icon whatsapp" title="Reserve!"></i></a>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/2/3.jpeg" alt="Image 3" class="gallery-img" data-toggle="modal" data-target="#exampleModal3" title="More Info">
+              <a href="https://api.whatsapp.com/send?phone=NUMERO_DE_TELEFONO" target="_blank"><i class="fab fa-whatsapp popup-icon whatsapp" title="Reserve!"></i></a>
+            </div>
+
+            <div class="gallery-item">
+              <img src="assets/img/2/4.jpeg" alt="Image 3" class="gallery-img" data-toggle="modal" data-target="#exampleModal4" title="More Info">
+              <a href="https://api.whatsapp.com/send?phone=NUMERO_DE_TELEFONO" target="_blank"><i class="fab fa-whatsapp popup-icon whatsapp" title="Reserve!"></i></a>
+            </div>
+
+            <div class="gallery-item">
+              <img src="assets/img/2/5.jpeg" alt="Image 3" class="gallery-img" data-toggle="modal" data-target="#exampleModal5" title="More Info">
+              <a href="https://api.whatsapp.com/send?phone=NUMERO_DE_TELEFONO" target="_blank"><i class="fab fa-whatsapp popup-icon whatsapp" title="Reserve!"></i></a>
+            </div>
+
+           
+          </div>
+        </div>
+
+
+         
+        <div class="container mt-5">
+          <div class="gallery-container">
+            <div class="gallery-item">
+              <img src="assets/img/2/6.jpeg" alt="Image 3" class="gallery-img" data-toggle="modal" data-target="#exampleModal6" title="More Info">
+              <a href="https://api.whatsapp.com/send?phone=NUMERO_DE_TELEFONO" target="_blank"><i class="fab fa-whatsapp popup-icon whatsapp" title="Reserve!"></i></a>
+            </div>
+
+            <div class="gallery-item">
+              <img src="assets/img/2/7.jpeg" alt="Image 3" class="gallery-img" data-toggle="modal" data-target="#exampleModal7" title="More Info">
+              <a href="https://api.whatsapp.com/send?phone=NUMERO_DE_TELEFONO" target="_blank"><i class="fab fa-whatsapp popup-icon whatsapp" title="Reserve!"></i></a>
+            </div>
+
+            <div class="gallery-item">
+              <img src="assets/img/2/8.jpeg" alt="Image 3" class="gallery-img" data-toggle="modal" data-target="#exampleModal8" title="More Info">
+              <a href="https://api.whatsapp.com/send?phone=NUMERO_DE_TELEFONO" target="_blank"><i class="fab fa-whatsapp popup-icon whatsapp" title="Reserve!"></i></a>
+            </div>
+
+            <div class="gallery-item">
+              <img src="assets/img/2/9.jpeg" alt="Image 3" class="gallery-img" data-toggle="modal" data-target="#exampleModal9" title="More Info">
+              <a href="https://api.whatsapp.com/send?phone=NUMERO_DE_TELEFONO" target="_blank"><i class="fab fa-whatsapp popup-icon whatsapp" title="Reserve!"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-body text-center">
+                <img src="assets/img/2/1.jpeg" alt="Popup Image" id="popup-img" style="max-width: 100%; max-height: 70vh;">
+                <p>ADDITIONAL SERVICES:</p>
+                <p>
+                  • Refreshing anointing (cranial massage) -
+                  • Eye rest (eye mask)<BR>
+                  • Leg discharge (mask) -
+                  • Foot reflexology<BR>
+                  • Neck and back. -
+                  • BODY exfoliation</p>
+
+                    <p>30 min. $ 650.00<BR>
+                      60 min. $ 1,000.00
+                      </p>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="https://api.whatsapp.com/send?phone=524272296597" target="_blank">
+                  <button type="button" class="btn btn-primary ml-2 bg-dark text-light" onclick="Reserve()">Reserve</button>
+
+                  <script>
+                  function Reserve() {
+                      var mensaje = encodeURIComponent("Casa Colins By Colins Spa - 'Un descanso para el alma' - Quisiera agendar una cita! Me interesa el SERVICIO ADICIONAL DEL  ANDAR DE LA PUERTA SECULAR");
+                      window.location.href = "https://api.whatsapp.com/send?phone=524272296597&text=" + mensaje;
+                  }
+                  </script>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-body text-center">
+                  <img src="assets/img/2/2.jpeg" alt="Popup Image" id="popup-img" style="max-width: 100%; max-height: 70vh;">
+                  <p>HEALING MASSAGE</p>
+                  <p>Eliminates toxins and tensions generated by the accumulation of stress, through
+                    gentle but firm manipulations; awakens the subconscious reflex to
+                    begin to heal, let the skin express your feelings and reconnect with the
+                    mind.</p>
+                  <p>60 min. $ 1,100</p>
+                  <p>90 min. $ 1,500</p>
+                  <p>120 min. $ 1,900</p>
+                  <p><i class="fas fa-home"></i>Home service available from 90 min.</p>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <a href="https://api.whatsapp.com/send?phone=524272296597" target="_blank">
+                    <button type="button" class="btn btn-primary ml-2 bg-dark text-light" onclick="Reserve()">Reserve</button>
+
+                    <script>
+                    function Reserve() {
+                        var mensaje = encodeURIComponent("Casa Colins By Colins Spa - 'Un descanso para el alma' - Quisiera agendar una cita! Me interesa el MASAJE SANADOR DEL  ANDAR DE LA PUERTA SECULAR");
+                        window.location.href = "https://api.whatsapp.com/send?phone=524272296597&text=" + mensaje;
+                    }
+                    </script>
+                </a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-body text-center">
+                  <img src="assets/img/2/3.jpeg" alt="Popup Image" id="popup-img" style="max-width: 100%; max-height: 70vh;">
+                  <p>MUSCLE REPAIR</p>
+                  <p>Reduces discomfort due to accumulated tension generated by stress or
+                    over muscle stimulation, releasing the lactic acid accumulated in the
+                    facial muscle and helping the reabsorption of calcium ions for the
+                    muscle rest.
+                    Recommended for people who have repetitive activities or lack of
+                    movement during your daily life.</p>
+                    <p>60 min. $ 1,100</p>
+                    <p>90 min. $ 1,500</p>
+                    <p>120 min. $ 1,900</p>
+                    <p><i class="fas fa-home"></i>Home service available from 90 min.</p>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <a href="https://api.whatsapp.com/send?phone=524272296597" target="_blank">
+                    <button type="button" class="btn btn-primary ml-2 bg-dark text-light" onclick="Reserve()">Reserve</button>
+
+                    <script>
+                    function Reserve() {
+                        var mensaje = encodeURIComponent("Casa Colins By Colins Spa - 'Un descanso para el alma' - Quisiera agendar una cita! Me interesa el REPARADOR MUSCULAR DEL  ANDAR DE LA PUERTA SECULAR");
+                        window.location.href = "https://api.whatsapp.com/send?phone=524272296597&text=" + mensaje;
+                    }
+                    </script>
+                </a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-body text-center">
+                  <img src="assets/img/2/4.jpeg" alt="Popup Image" id="popup-img" style="max-width: 100%; max-height: 70vh;">
+                  <p>SPORT MASSAGE</p>
+                  <p>Quick and deep manipulations are applied that will help your
+                    muscles eliminate lactic acid; stretching or stretching is also applied
+                    push-ups that will help ligaments and tendons allowing a
+                    accelerated repair and rest before and/or post training.</p>
+                    <p>60 min. $ 1,100</p>
+                    <p>90 min. $ 1,500</p>
+                    <p>120 min. $ 1,900</p>
+                    <p><i class="fas fa-home"></i>Home service available from 90 min.</p>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <a href="https://api.whatsapp.com/send?phone=524272296597" target="_blank">
+                    <button type="button" class="btn btn-primary ml-2 bg-dark text-light" onclick="Reserve()">Reserve</button>
+
+                    <script>
+                    function Reserve() {
+                        var mensaje = encodeURIComponent("Casa Colins By Colins Spa - 'Un descanso para el alma' - Quisiera agendar una cita! Me interesa el MASAJE DEPORTIVO DEL  ANDAR DE LA PUERTA SECULAR");
+                        window.location.href = "https://api.whatsapp.com/send?phone=524272296597&text=" + mensaje;
+                    }
+                    </script>
+                </a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel5" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-body text-center">
+                  <img src="assets/img/2/5.jpeg" alt="Popup Image" id="popup-img" style="max-width: 100%; max-height: 70vh;">
+                  <p>LYMPHATIC DRAINAGE</p>
+                  <p>Accelerates the elimination of toxins and waste from the body through
+                    lymphatic system, thus improving the immune capacity of the body.
+                    Helps accelerate the body's recovery after an operation;
+                    in a hangover or when overweight and stomach upset occurs
+                    frequent. It's not massage.</p>
+                  <p>90 min. $ 1,500.00
+
+                  </p><p><i class="fas fa-home"></i> Home service available</p>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <a target="_blank">
+                    <button type="button" class="btn btn-primary ml-2 bg-dark text-light" onclick="Reserve()">Reserve</button>
+
+<script>
+function Reserve() {
+    var mensaje = encodeURIComponent("Casa Colins By Colins Spa - 'Un descanso para el alma' - Quisiera agendar una cita! Me interesa el DRENAJE LINFÁTICO DEL  ANDAR DE LA PUERTA SECULAR");
+    window.location.href = "https://api.whatsapp.com/send?phone=524272296597&text=" + mensaje;
+}
+</script>
+
+                </a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="modal fade" id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel6" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-body text-center">
+                  <img src="assets/img/2/6.jpeg" alt="Popup Image" id="popup-img" style="max-width: 100%; max-height: 70vh;">
+                  <p>HOT STONES</p>
+                  <p>Excellent reliever since it combines the
+                    thermal effects with a manual technique
+                    decongestant and muscle relaxant for
+                    a generalized physical and energetic rest.
+                    Reducing the immediate and subsequent pain of others
+                    decontracting techniques. Generates a balance of
+                    the connection of the chakras.</p>
+                  <p>90 min. $ 1,800.00
+
+                  </p>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <a href="https://api.whatsapp.com/send?phone=524272296597" target="_blank">
+                    <button type="button" class="btn btn-primary ml-2 bg-dark text-light" onclick="Reserve()">Reserve</button>
+
+<script>
+function Reserve() {
+    var mensaje = encodeURIComponent("Casa Colins By Colins Spa - 'Un descanso para el alma' - Quisiera agendar una cita! Me interesa el PIEDRAS CALIENTES DEL  ANDAR DE LA PUERTA SECULAR");
+    window.location.href = "https://api.whatsapp.com/send?phone=524272296597&text=" + mensaje;
+}
+</script>
+                </a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          
+          <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel7" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-body text-center">
+                  <img src="assets/img/2/7.jpeg" alt="Popup Image" id="popup-img" style="max-width: 100%; max-height: 70vh;">
+                  <p>
+                    AQUATIC RITUAL OF THE HEART</p>
+                  <p>Recently developed technique in
+                    Japan, in which water is used as a channel
+                    of purification and connection; to unblock
+                    or overcome forgotten emotional situations
+                    or not worked.
+                    Specific marma points are stimulated,
+                    contributing to physical and mental relaxation.</p>
+                  <p>50 min. $ 1,600.00
+
+                  </p> <p><i class="fas fa-home"></i> Home service available</p>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <a href="https://api.whatsapp.com/send?phone=524272296597" target="_blank">
+                    <button type="button" class="btn btn-primary ml-2 bg-dark text-light" onclick="Reserve()">Reserve</button>
+
+<script>
+function Reserve() {
+    var mensaje = encodeURIComponent("Casa Colins By Colins Spa - 'Un descanso para el alma' - Quisiera agendar una cita! Me interesa el RITUAL ACUÁTICO DEL CORAZÓN DEL  ANDAR DE LA PUERTA SECULAR");
+    window.location.href = "https://api.whatsapp.com/send?phone=524272296597&text=" + mensaje;
+}
+</script>
+                </a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="modal fade" id="exampleModal8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel8" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-body text-center">
+                  <img src="assets/img/2/8.jpeg" alt="Popup Image" id="popup-img" style="max-width: 100%; max-height: 70vh;">
+                  <p>SHIRODHARA MASSAGE</p>
+                  <p>Therapy used within Ayurveda, to relax and
+                    disconnect the mind from the being…. What produces a
+                    reset our consciousness and memory. Eliminating the
+                    stress and improving night rest which allows
+                    a total body recovery. Points are worked
+                    marma in body to accelerate the physical response.</p>
+                  <p>90 min. $ 2,000.00 
+
+                  </p> 
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <a href="https://api.whatsapp.com/send?phone=524272296597" target="_blank">
+                    <button type="button" class="btn btn-primary ml-2 bg-dark text-light" onclick="Reserve()">Reserve</button>
+
+<script>
+function Reserve() {
+    var mensaje = encodeURIComponent("Casa Colins By Colins Spa - 'Un descanso para el alma' - Quisiera agendar una cita! Me interesa el MASAJE SHIRODHARA DEL  ANDAR DE LA PUERTA SECULAR");
+    window.location.href = "https://api.whatsapp.com/send?phone=524272296597&text=" + mensaje;
+}
+</script>
+                </a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="modal fade" id="exampleModal9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel9" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-body text-center">
+                  <img src="assets/img/2/9.jpeg" alt="Popup Image" id="popup-img" style="max-width: 100%; max-height: 70vh;">
+                  <p>THAI MASSAGE</p>
+                  <p>Traditional ancient healing medicine of the
+                    buddha times, which applies a psychophysical technique
+                    to dismantle the body, mental and
+                    emotional that we once built for
+                    replace it with one more in line with the potential
+                    of our current being, it is a therapy that you should not
+                    let pass.</p>
+                  <p>90 min. $ 2,000.00 
+
+                  </p> 
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <a href="https://api.whatsapp.com/send?phone=524272296597" target="_blank">
+                    <button type="button" class="btn btn-primary ml-2 bg-dark text-light" onclick="Reserve()">Reserve</button>
+
+<script>
+function Reserve() {
+    var mensaje = encodeURIComponent("Casa Colins By Colins Spa - 'Un descanso para el alma' - Quisiera agendar una cita! Me interesa el MASAJE THAILANDES DEL  ANDAR DE LA PUERTA SECULAR");
+    window.location.href = "https://api.whatsapp.com/send?phone=524272296597&text=" + mensaje;
+}
+</script>
+                </a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+          // Mostrar imagen en el modal al hacer clic en una imagen de la galería
+          $('.gallery-img').click(function() {
+            var imgSrc = $(this).attr('src');
+            $('#popup-img').attr('src', imgSrc);
+          });
+        </script>
+<br>
+</head>
+<body>
+<div class="container">
+  
+  <div class="row mt-4">
+   
+   
+    
+  </div>
+</div>
+<!-- Bootstrap JS (opcional, si necesitas funcionalidades de JavaScript de Bootstrap) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        </body>
+        </html>
+        
+    </body>
+    </html>
+    
+    
+</body>
+
+
+  <!-- ======= Footer ======= -->
+  <div id="footer" class="text-center">
+    <div class="container">
+      <div class="socials-media text-center">
+
+        <ul class="list-unstyled">
+          <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+          <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+          <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+          <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+        </ul>
+
+      </div>
+
+      
+      <center><p class="small-text">Schedule From 8:00 am - 8:00 pm (ending at 9:00 or 9:30)
+        § Outside these hours there is an additional cost. $200.00 </p></center> 
+
+        <center>
+          <p class="small-text">
+              <i class="fas fa-home"></i> 
+              Home service - Additional Cost $300.00 in Mexico City
+              <br>
+             
+§ Female therapists DO NOT provide home service.
+</p>
+      </center>
+      <p>&copy; 
+        Copyrights Collins Spa. All rights reserved.</p>
+
+      <div class="credits">
+      
+      </div>
+
+    </div>
+  </div><!-- End Footer -->
+</html>

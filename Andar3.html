@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANDAR</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff; /* Cambiamos el color de fondo a blanco */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      opacity: 1; /* Establecemos la opacidad inicial a 1 */
+      transition: opacity 1s; /* Agregamos una transición de opacidad */
+    }
+
+    .diamond {
+      width: 20px;
+      height: 20px;
+      border: 2px solid #333;
+      border-radius: 5px;
+      animation: rotateDiamond 1s infinite linear;
+      margin-bottom: 10px; /* Añadimos un margen inferior para separar el rombo del texto */
+    }
+
+    @keyframes rotateDiamond {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .text {
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<div class="loader">
+  <div class="diamond"></div>
+  <div class="text">Un descanso para el alma</div>
+</div>
+
+<div class="container mt-5">
+  <!-- Contenido de tu página aquí -->
+</div>
+
+<script>
+  // Ocultar la pantalla de carga y agregar efecto de desvanecido
+  setTimeout(function() {
+    var loader = document.querySelector('.loader');
+    loader.style.opacity = '0';
+    setTimeout(function() {
+      loader.style.display = 'none';
+    }, 1000); // 1000 milisegundos = 1 segundo
+  }, 2000); // 2000 milisegundos = 2 segundos
+</script>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANDAR</title>
+      <!-- Template Main CSS File -->
+      <meta content="" name="description">
+  <meta content="" name="keywords">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicons -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+  <link href="assets/img/asdasdasd.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/styleAndares.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<BR></BR>
+
+ <!-- Aquí se agrega el separador -->
+ <div id="andares" class="container position-relative">
+  <div class="section-title text-center">
+      <h2>ANDAR DE LO INEFABLE</h2>
+      <div class="separator">
+          <img src="assets/img/separador.png" alt="Separador">
+      </div> <!-- Aquí se agrega el separador -->
+  </div>
+  <a href="index.html#andar3" class="position-absolute top-0 end-0 m-3 text-dark">
+    <i class="bi bi-arrow-left-circle fs-3 arrow-custom"></i>
+</a>
+</div>
+
+
+   <!-- Aquí se agrega el separador -->
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title></title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <style>
+        /* Estilos adicionales */
+        .gallery-container {
+          display: flex;
+          justify-content: center; /* Centra horizontalmente el contenedor */
+          overflow-x: auto; /* Permite desplazamiento horizontal */
+        }
+        .gallery-item {
+          flex: 0 0 auto; /* Tamaño de las imágenes */
+          margin-right: 10px;
+          position: relative; /* Permitirá posicionar los íconos */
+        }
+        .gallery-img {
+          width: 200px;
+          height: 200px;
+          object-fit: cover;
+          cursor: pointer;
+        }
+        .popup-icon {
+          position: absolute;
+          color: #fff;
+          font-size: 24px;
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+        .gallery-item:hover .popup-icon {
+          opacity: 1;
+        }
+        .popup-icon:hover {
+          cursor: pointer;
+        }
+        .popup-icon.whatsapp {
+          top: 10%;
+          left: 10%;
+        }
+        .popup-icon.info {
+          top: 10%;
+          left: 20%;
+        }
+      </style>
+    </head>
+    <body>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Galería de Imágenes</title>
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+          <style>
+            /* Estilos adicionales */
+            .gallery-container {
+              display: flex;
+              justify-content: center; /* Centra horizontalmente el contenedor */
+              overflow-x: auto; /* Permite desplazamiento horizontal */
+            }
+            .gallery-item {
+              flex: 0 0 auto; /* Tamaño de las imágenes */
+              margin-right: 10px;
+              position: relative; /* Permitirá posicionar los íconos */
+            }
+            .gallery-img {
+              width: 200px;
+              height: 200px;
+              object-fit: cover;
+              cursor: pointer;
+            }
+            .popup-icon {
+              position: absolute;
+              color: #fbfbfc  ;
+              font-size: 24px;
+              opacity: 0;
+              transition: opacity 0.3s;
+            }
+            .gallery-item:hover .popup-icon {
+              opacity: 1;
+            }
+            .popup-icon:hover {
+              cursor: pointer;
+              color: rgb(230, 225, 225);
+              transition: 0.3s;
+            }
+            .popup-icon.whatsapp {
+              top: 10%;
+              left: 10%;
+            }
+            .popup-icon.info {
+              top: 10%;
+              left: 20%;
+            }
+        
+            /* Estilos adicionales para dispositivos móviles */
+            @media (max-width: 576px) {
+              .gallery-container {
+                flex-direction: column; /* Muestra las imágenes una debajo de la otra en dispositivos móviles */
+                align-items: center; /* Centra el contenido en el eje horizontal */
+              }
+            }
+          </style>
+        </head>
+        <body>
+        
+        <div class="container mt-5">
+          <div class="gallery-container">
+            <div class="gallery-item">
+              <img src="assets/img/3/1.jpeg" alt="Image 1" class="gallery-img" data-toggle="modal" data-target="#exampleModal" title="Más información">
+              <a href="https://api.whatsapp.com/send?phone=NUMERO_DE_TELEFONO" target="_blank"><i class="fab fa-whatsapp popup-icon whatsapp" title="Reservalo!"></i></a>
+              
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/3/2.jpeg" alt="Image 2" class="gallery-img" data-toggle="modal" data-target="#exampleModal2" title="Más información">
+              <a href="https://api.whatsapp.com/send?phone=NUMERO_DE_TELEFONO" target="_blank"><i class="fab fa-whatsapp popup-icon whatsapp" title="Reservalo!"></i></a>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/img/3/3.jpeg" alt="Image 3" class="gallery-img" data-toggle="modal" data-target="#exampleModal3" title="Más información">
+              <a href="https://api.whatsapp.com/send?phone=NUMERO_DE_TELEFONO" target="_blank"><i class="fab fa-whatsapp popup-icon whatsapp" title="Reservalo!"></i></a>
+            </div>
+
+
+          </div>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-body text-center">
+                <img src="assets/img/3/1.jpeg" alt="Popup Image" id="popup-img" style="max-width: 100%; max-height: 70vh;">
+                <p>2 ALMAS – 4 MANOS</p>
+                <p>Una experiencia física y sensorial que llevara tu cuerpo y
+                  mente a un estado de relajación sin igual, disfruta de un
+                  masaje sensorial donde las manos de dos terapeutas se
+                  funden en una danza restaurativa del bienestar físico
+                  emocional y mental.</p>
+
+                    <p>50 min. $ 1,900</p>
+                    <p>80 min. $ 3,000</p>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <a href="https://api.whatsapp.com/send?phone=123456789" target="_blank">
+                  <button type="button" class="btn btn-primary ml-2 bg-dark text-light" onclick="reservar()">Reservar</button>
+
+                  <script>
+                  function reservar() {
+                      var mensaje = encodeURIComponent("Casa Colins By Colins Spa - 'Un descanso para el alma' - Quisiera agendar una cita! Me interesa el 2 ALMAS – 4 MANOS. DEL ANDAR DE LO INEFABLE ");
+                      window.location.href = "https://api.whatsapp.com/send?phone=524272296597&text=" + mensaje;
+                  }
+                  </script>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+             <!-- Modal -->
+             <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-body text-center">
+                    <img src="assets/img/3/2.jpeg" alt="Popup Image" id="popup-img" style="max-width: 100%; max-height: 70vh;">
+                    <p>SÍNTONIA DE AMOR</p>
+                    <p>Comparte un momento de relajación con tu pareja, y
+                      disfruta de un masaje sanador o reparador (a elección).
+                      En este ritual tu y tu pareja crearán una SINERGIA
+                      OLFATIVA única en donde mezclaremos una seria de
+                      aromas que elegirán por separado, y al mezclar sus
+                      diferentes comprobaremos la conexión y balance que
+                      tienen como pareja.</p>
+    
+                        <p>60 min. $ 2,100</p>
+                        <p>90 min. $ 3,000</p>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <a href="https://api.whatsapp.com/send?phone=123456789" target="_blank">
+                      <button type="button" class="btn btn-primary ml-2 bg-dark text-light" onclick="reservar()">Reservar</button>
+    
+                      <script>
+                      function reservar() {
+                          var mensaje = encodeURIComponent("Casa Colins By Colins Spa - 'Un descanso para el alma' - Quisiera agendar una cita! Me interesa el SÍNTONIA DE AMOR DEL ANDAR DE LO INEFABLE ");
+                          window.location.href = "https://api.whatsapp.com/send?phone=524272296597&text=" + mensaje;
+                      }
+                      </script>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+     <!-- Modal -->
+     <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body text-center">
+            <img src="assets/img/3/3.jpeg" alt="Popup Image" id="popup-img" style="max-width: 100%; max-height: 70vh;">
+            <p>MIS RAÍCES. 
+            </p>
+            <p>Inspirado en el ancestral TEMAZCAL, ritual que ayuda a renacer energética y
+              espiritual; con la finalidad que decidas que tipo de persona serás a partir de
+              este punto. El ritual incluye un facial y una envoltura corporal desintoxicante,
+              para culminar con un masaje aplicado con las hierbas tradicionales.</p>
+
+                <p>120 min. $ 2,500</p>
+               
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <a href="https://api.whatsapp.com/send?phone=123456789" target="_blank">
+              <button type="button" class="btn btn-primary ml-2 bg-dark text-light" onclick="reservar()">Reservar</button>
+
+              <script>
+              function reservar() {
+                  var mensaje = encodeURIComponent("Casa Colins By Colins Spa - 'Un descanso para el alma' - Quisiera agendar una cita! Me interesa el 2 ALMAS – 4 MANOS. DEL ANDAR DE LO INEFABLE ");
+                  window.location.href = "https://api.whatsapp.com/send?phone=524272296597&text=" + mensaje;
+              }
+              </script>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+         
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+          // Mostrar imagen en el modal al hacer clic en una imagen de la galería
+          $('.gallery-img').click(function() {
+            var imgSrc = $(this).attr('src');
+            $('#popup-img').attr('src', imgSrc);
+          });
+        </script>
+<br>
+</head>
+<body>
+<div class="container">
+  
+  <div class="row mt-4">
+   
+     <center><p class="small-text">Todos los faciales incluyen aparatología
+      dependiendo las necesidades específicas de tu
+      piel y del facial, el especialista en la piel (cosmetólogo)
+      decidirá en base al análisis previo el o los
+      aparatos a utilizar durante el servicio.  </p></center> 
+
+    
+    
+  </div>
+</div>
+<!-- Bootstrap JS (opcional, si necesitas funcionalidades de JavaScript de Bootstrap) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        </body>
+        </html>
+        
+    </body>
+    </html>
+    
+    
+</body>
+
+
+  <!-- ======= Footer ======= -->
+  <div id="footer" class="text-center">
+    <div class="container">
+      <div class="socials-media text-center">
+
+        <ul class="list-unstyled">
+          <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+          <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+          <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+          <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+        </ul>
+
+      </div>
+
+      
+      <center><p class="small-text">Horario De 8:00 am - 8:00 pm (para terminar 9:00 o 9:30)
+        § Fuera de este horario tiene un costo adicional de.  $ 200.00 </p></center> 
+
+        <center>
+          <p class="small-text">
+              <i class="fas fa-home"></i> Servicio a domicilio - Costo Adicional $300.00 en la ciudad de México
+              <br>
+              § Las terapeutas mujeres NO dan servicio a domicilio.
+          </p>
+      </center>
+      <p>&copy; Copyrights Collins Spa. Todos los derechos reservados.</p>
+      <div class="credits">
+     
+       
+      </div>
+
+    </div>
+  </div><!-- End Footer -->
+</html>
