@@ -2011,3 +2011,14 @@ blockquote {
   transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
 }
 
+.about-img img {
+  border: 2px solid #000; /* Cambia 2px al grosor deseado */
+}
+
+.div-img-bg {
+  border: 4px solid #000 !important; /* Cambia 2px al grosor deseado */
+}
+
+.col-lg-4 {
+  padding: 2px; /* Cambia 2px al grosor deseado */
+}
