@@ -310,21 +310,37 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Toggle mobile nav dropdowns
    */
-  const navDropdowns = document.querySelectorAll('.navbar .dropdown > a');
+ // Selecciona todos los elementos del menú desplegable en la barra de navegación
+const navDropdowns = document.querySelectorAll('.navbar .dropdown');
 
-  navDropdowns.forEach(el => {
-    el.addEventListener('click', function(event) {
-      if (document.querySelector('.mobile-nav-active')) {
-        event.preventDefault();
-        this.classList.toggle('active');
-        this.nextElementSibling.classList.toggle('dropdown-active');
+// Adjunta un manejador de eventos de clic a cada elemento del menú desplegable
+navDropdowns.forEach(dropdown => {
+  const dropdownToggle = dropdown.querySelector('.nav-link');
+  const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+  const dropDownIndicator = dropdownToggle.querySelector('.bi-chevron-down');
 
-        let dropDownIndicator = this.querySelector('.dropdown-indicator');
-        dropDownIndicator.classList.toggle('bi-chevron-up');
-        dropDownIndicator.classList.toggle('bi-chevron-down');
-      }
-    })
+  dropdownToggle.addEventListener('click', function(event) {
+    // Verifica si el dispositivo es móvil (ancho de pantalla menor o igual a 768px)
+    if (window.innerWidth <= 768) {
+      // Previene el comportamiento predeterminado del enlace
+      event.preventDefault();
+
+      // Cierra todos los dropdown excepto el actual
+      navDropdowns.forEach(d => {
+        if (d !== dropdown) {
+          d.querySelector('.dropdown-menu').classList.remove('dropdown-active');
+          d.querySelector('.bi-chevron-up').classList.remove('bi-chevron-up');
+        }
+      });
+
+      // Abre o cierra el dropdown actual
+      dropdownMenu.classList.toggle('dropdown-active');
+
+      // Cambia la clase del indicador del menú desplegable
+      dropDownIndicator.classList.toggle('bi-chevron-up');
+    }
   });
+});
 
   /**
    * Scroll top button
