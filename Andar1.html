@@ -274,10 +274,33 @@
                 <p class="font-weight-bold" style="font-size: 16px;">Duración: 90 min | Precio: $1,900</p>
                 <div class="mt-4">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal" style="border: 1px solid #0B0B3B; color: #ffffff; background-color: #0B0B3B; border-radius: 5px;">Cerrar</button>
-                  <a href="https://web.whatsapp.com/send?phone=524272296597&text=Casa%20Colins%20By%20Colins%20Spa%20-%20%27Un%20descanso%20para%20el%20alma%27%20-%20Quisiera%20agendar%20una%20cita!%20Me%20interesa%20el%20FACIAL%20FIRMA%20MILOS.%20DEL%20ANDAR%20EMPIRIO" target="_blank">
+                  <script>
+                    function openWhatsApp() {
+                        // Verifica si el dispositivo es un dispositivo móvil
+                        const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                        
+                        // URL base del enlace de WhatsApp
+                        const whatsappBaseUrl = "https://api.whatsapp.com/send?";
+                        
+                        // Número de teléfono y mensaje predefinido
+                        const phoneNumber = "524272296597";
+                        const message = "Casa Colins By Colins Spa - 'Un descanso para el alma' - Quisiera agendar una cita! Me interesa el FACIAL FIRMA MILOS. DEL ANDAR EMPIRIO";
+                        
+                        // Construye la URL completa del enlace de WhatsApp
+                        let whatsappUrl = whatsappBaseUrl + "phone=" + phoneNumber + "&text=" + encodeURIComponent(message);
+                        
+                        // Si es un dispositivo móvil, utiliza la URL del enlace directo de WhatsApp
+                        if (isMobileDevice) {
+                            whatsappUrl = "whatsapp://send?phone=" + phoneNumber + "&text=" + encodeURIComponent(message);
+                        }
+                        
+                        // Abre el enlace de WhatsApp
+                        window.open(whatsappUrl, "_blank");
+                    }
+                </script>
+                  <a href="#" onclick="openWhatsApp();">
                     <button type="button" class="btn btn-primary ml-2 bg-dark text-light">Reservar</button>
                 </a>
-              
                 </div>
               </div>
             </div>
